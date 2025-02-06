@@ -1,2 +1,4 @@
-# CTI110
-CTI110 Spring Semester 2025
+# CTI110 Repository
+Created for P1Lab2
+Urbi
+Febuary 6, 2025
