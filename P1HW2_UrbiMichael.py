@@ -30,6 +30,7 @@ print("Food:", food)
 print()
 print("Remaining Balance:", change)
 
+#Psudocode
 #Input budget(bud)
 #Input destination(Dest)
 #Input fuel expenditure (gas)
