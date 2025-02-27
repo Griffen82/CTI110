@@ -18,6 +18,15 @@ print()
 
 cars_input=input("Enter a vehicle to see it's MPG: ")
 print()
+
 mpg_output=cars[cars_input]
 
-print("The (cars_input) gets (mpg_output) mpg.""/n")
+print("The", (cars_input), "gets", (mpg_output), "mpg.")
+print()
+
+dist = float(input(f"How many miles will you drice the {cars_input}? "))
+print()
+
+fuel = dist/mpg_output
+
+print(f"{fuel:.2f} gallon(s) of gas are needed to drive the {cars_input} {dist:.1f} miles.")
