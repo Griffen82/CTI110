@@ -12,20 +12,21 @@ mod5 = float(input("Enter grade for Module 5: "))
 mod6 = float(input("Enter grade for Module 6: "))
 
 #Store the information in a list
-grades = list['mod1', 'mod2', 'mod3', 'mod4', 'mod5', 'mod6']
+gradeslist = [mod1, mod2, mod3, mod4, mod5, mod6]
+#print(gradelist)
 
 #Display common inquiries of grades and sum of grades
 print()
 print("-"*12, "Results", "-"*12)
-print(grades)
-#print(f"{"Lowest Grade:":<20} {}")
+
+print(f"{"Lowest Grade:":<20} {min(gradeslist)}")
 
 
-#print(f"{"Highest Grade:":<20} {}")
+print(f"{"Highest Grade:":<20} {max(gradeslist)}")
 
 
-#print(f"{"Sum of Grades:":<20} {}")
+print(f"{"Sum of Grades:":<20} {sum(gradeslist)}")
 
 
-#print(f"{"Average:":<20} {}")
+print(f"{"Average:":<20} {sum(gradeslist)/len(gradeslist):.2f}")
 print("-"*40)
