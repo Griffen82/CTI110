@@ -26,8 +26,7 @@ for i in range (1, nmbr+1):
 
     grades.insert(i-1, score)
 
-# Print lowest grade, modified list with lowest removed, average from new list
-# and letter grade
+# Print lowest grade, modified list with lowest removed, average from new list and letter grade
 
 print()
 print("-"*15, "Results", "-"*15)
