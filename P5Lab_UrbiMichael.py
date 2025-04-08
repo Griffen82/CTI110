@@ -9,12 +9,12 @@ import random
 
 # Secondary function
 
-def dispense_change
-    if money==0:
-    print("No change")
+def dispense_change():
+    if r_change==0:
+        print("No change")
     
-    dollars = money//100
-    quarters = (money - (dollars*100))
+    dollars = r_change//100
+    quarters = (r_change - (dollars*100))
 
     if dollars > 0:
         print(dollars, end=' ')
