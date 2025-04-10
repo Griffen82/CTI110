@@ -9,12 +9,13 @@ import random
 
 # Secondary function
 
-def dispense_change():
-    if r_change==0:
+def dispense_change(r_change):
+    change = int(r_change * 100)
+    if change==0:
         print("No change")
     
-    dollars = r_change//100
-    quarters = (r_change - (dollars*100))
+    dollars = change//100
+    quarters = (change - (dollars*100))
 
     if dollars > 0:
         print(dollars, end=' ')
@@ -76,10 +77,13 @@ def change():
     # Ask user how much they will pay
 
     pay = float(input("How much will you pay? "))
+
+    # Calculate change given back
+    
     change = pay - f_owe
     r_change = round(change, 2)
     s_change = str(r_change)
     print("Your change is: $" +s_change)
     print()
-    dispense_change()
+    dispense_change(r_change)
 change()
