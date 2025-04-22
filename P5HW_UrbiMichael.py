@@ -159,7 +159,7 @@ def char_create():
             gear.update({"Weapon":"dagger"})
             print("1. Confusion: % chance enemy hurts themself.")
             print("2. Beginners Luck: % chance attack deals triple damage.")
-            vocskl = input("Please select a vocational skill (1 or 2): ")
+            vocskl = int(input("Please select a vocational skill (1 or 2): "))
             while vocskl < 1 or vocskl >= 3:
                 print("Invalid selection, please select again.")
                 vocskl = int(input("Please select a vocational skill (1 or 2): "))
