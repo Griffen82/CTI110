@@ -37,11 +37,20 @@ def grocery_list(items):
 
 # Function to display items in user's cart
 def show_cart(basket):
+    cart = {}
     print()
     print("The items currently in your cart are:")
     item = len(basket)
     for i in range(1, item+1):
-        print(basket[(i - 1)])
+        qty = basket.count(basket[(i - 1)])
+        cart.update({basket[(i - 1)]: qty})
+    print(f'{"Item":<50} {"Quantity"}')
+    print("-"*60)
+    l_cart = len(cart)
+    for i in range(1, l_cart+1):
+        product = list(cart.keys())
+        product.sort()
+        print(f'{product[(i - 1)]:<50} {cart.get(product[(i - 1)])}')
 
 # Function displaying itemized receipt
 def calc_total(cart, cost):
@@ -59,7 +68,7 @@ def calc_total(cart, cost):
     print(f'{"SUBTOTAL: ":<30} {"$"+stot}'"\n")
     tax = str(f'{(subtotal * .02):.2f}')
     print(f'{"TAX: ":<30} {"$"+tax}')
-    total = str(float(tax) + float(subtotal))
+    total = str(f'{(float(tax) + float(subtotal)):.2f}')
     print(f'{"TOTAL: ":<30} {"$"+total}')
     return total
 
