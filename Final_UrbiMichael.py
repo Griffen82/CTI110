@@ -3,7 +3,7 @@
 # Final
 # Using what we learned of loops, functions, and modules for a check-out program
 
-
+# Github CTI 110-002 repository link: github.com/Griffen82/CTI110
 
 # Function to display available items
 def show_avail_items(grocer):
