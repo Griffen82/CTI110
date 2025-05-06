@@ -56,13 +56,23 @@ def show_cart(basket):
 def calc_total(cart, cost):
     print()
     print("Grocery Checkout Receipt")
+    print(f'{"Item":<15} {"Ind. Price":<15} {"Quantity":<15} {"Total"}')
     print("-"*60)
+    basket = {}
     subtotal = 0
     items = len(cart)
     for i in range(1, items+1):
+        qty = cart.count(cart[(i - 1)])
+        basket.update({cart[(i - 1)]: qty})
         subtotal = subtotal + float(cost.get(cart[(i-1)]))
-        price = str(cost.get(cart[(i-1)]))
-        print(f'{cart[(i-1)]:<50} {"$"+price}')
+    l_basket = len(basket)
+    for i in range(1, l_basket+1):
+        product = list(basket.keys())
+        product.sort()
+        price = str(cost.get(product[(i-1)]))
+        it_total = (float(price) * int(basket.get(product[(i - 1)])))
+        sit_tot = str(f'{it_total:.2f}')
+        print(f'{product[(i-1)]:<15} {"$"+price:<15} {basket.get(product[i - 1]):<15} {"$"+sit_tot}')
     print()
     stot = str(f'{subtotal:.2f}')
     print(f'{"SUBTOTAL: ":<30} {"$"+stot}'"\n")
